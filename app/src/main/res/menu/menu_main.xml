@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mxpj.weatherapp.MainActivity">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/bottom_menu_home" />
+    <item
+        android:id="@+id/option2Fragment"
+        android:icon="@drawable/ic_option"
+        android:title="@string/bottom_menu_option2" />
+    <item
+        android:id="@+id/option3Fragment"
+        android:icon="@drawable/ic_option"
+        android:title="@string/bottom_menu_option3" />
+    <item
+        android:id="@+id/option4Fragment"
+        android:icon="@drawable/ic_option"
+        android:title="@string/bottom_menu_option4" />
+    <item
+        android:id="@+id/option5Fragment"
+        android:icon="@drawable/ic_option"
+        android:title="@string/bottom_menu_option5" />
+</menu>

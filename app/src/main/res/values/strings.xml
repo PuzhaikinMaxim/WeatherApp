@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="bottom_menu_home">Home</string>
+    <string name="bottom_menu_option2">Option2</string>
+    <string name="bottom_menu_option3">Option3</string>
+    <string name="bottom_menu_option4">Option4</string>
+    <string name="bottom_menu_option5">Option5</string>
+    <string name="option_stub">Option fragment</string>
+    <string name="temperature_header">Температура</string>
+    <string name="min_temperature">Мин: %d° С</string>
+    <string name="max_temperature">Макс: %d° С</string>
+    <string name="overcast">Облачность: %d%%</string>
+    <string name="relative_humidity">Относительная влажность: %d%%</string>
+    <string name="pressure">Давление: %d мм рт. ст.</string>
+    <string name="wind_speed">Скорость ветра: %d м/с</string>
+</resources>
