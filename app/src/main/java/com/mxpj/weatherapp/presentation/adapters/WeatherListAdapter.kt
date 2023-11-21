@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.mxpj.weatherapp.R
 import com.mxpj.weatherapp.databinding.ItemWeatherDataBinding
 import com.mxpj.weatherapp.domain.WeatherData
+import com.squareup.picasso.Picasso
 
 class WeatherListAdapter(
     private val context: Context
@@ -35,11 +36,17 @@ class WeatherListAdapter(
         val item = weatherDataList[position]
         with(holder.binding){
             tvDate.text = item.date
-            tvMaxTemperature.text = context.getString(R.string.max_temperature, item.maxTemperature)
-            tvMinTemperature.text = context.getString(R.string.min_temperature, item.minTemperature)
+            tvTemperature.text = context.getString(
+                R.string.temperature_range,
+                item.minTemperature,
+                item.maxTemperature
+            )
             tvOvercast.text = context.getString(R.string.overcast, item.overcast)
             tvRelativeHumidity.text = context.getString(R.string.relative_humidity, item.relativeHumidity)
             tvPressure.text = context.getString(R.string.pressure, item.pressure)
+            tvDescription.text = item.description
+            tvWindSpeed.text = context.getString(R.string.wind_speed, item.windSpeed)
+            Picasso.get().load(item.imageUrl).into(ivWeatherIcon)
         }
     }
 

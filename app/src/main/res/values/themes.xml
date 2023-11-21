@@ -24,24 +24,57 @@
     <style name="Theme.WeatherApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="WeatherItemHeader" parent="Widget.AppCompat.TextView">
-        <item name="fontFamily">sans-serif-condensed</item>
-        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">24sp</item>
     </style>
 
-    <style name="WeatherItemBlockHeader" parent="Widget.AppCompat.TextView">
-        <item name="fontFamily">sans-serif</item>
+    <style name="WeatherItemBlockName" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="WeatherItemBlockImage">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+    </style>
+
+    <style name="WeatherItemBlock">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="WeatherItemText" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="WeatherItemParameter" parent="WeatherItemText">
+        <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="WeatherItemText" parent="Widget.AppCompat.TextView">
-        <item name="fontFamily">sans-serif</item>
+    <style name="WeatherItemDescription" parent="WeatherItemText">
+        <item name="fontFamily">@font/roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="WeatherItemTemperature" parent="WeatherItemText">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
     </style>
 
     <style name="WeatherBlock">

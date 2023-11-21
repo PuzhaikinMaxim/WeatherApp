@@ -5,12 +5,17 @@
     <string name="bottom_menu_option3">Option3</string>
     <string name="bottom_menu_option4">Option4</string>
     <string name="bottom_menu_option5">Option5</string>
-    <string name="option_stub">Option fragment</string>
+    <string name="option_stub">Option fragment %d</string>
     <string name="temperature_header">Температура</string>
     <string name="min_temperature">Мин: %d° С</string>
     <string name="max_temperature">Макс: %d° С</string>
-    <string name="overcast">Облачность: %d%%</string>
-    <string name="relative_humidity">Относительная влажность: %d%%</string>
-    <string name="pressure">Давление: %d мм рт. ст.</string>
-    <string name="wind_speed">Скорость ветра: %d м/с</string>
+    <string name="temperature_range">%d° С / %d° С</string>
+    <string name="overcast">%d%%</string>
+    <string name="overcast_name">Облачность</string>
+    <string name="relative_humidity">%d%%</string>
+    <string name="relative_humidity_name">Относительная влажность</string>
+    <string name="pressure">%d мм рт. ст.</string>
+    <string name="pressure_name">Давление</string>
+    <string name="wind_speed">%d м/с</string>
+    <string name="wind_speed_name">Скорость ветра</string>
 </resources>
