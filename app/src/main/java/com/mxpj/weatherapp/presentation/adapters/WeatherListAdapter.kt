@@ -23,6 +23,8 @@ class WeatherListAdapter(
             field = value
         }
 
+    var onWeatherItemClick: (String) -> Unit = {}
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherItemViewHolder {
         val binding = ItemWeatherDataBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -46,6 +48,9 @@ class WeatherListAdapter(
             tvPressure.text = context.getString(R.string.pressure, item.pressure)
             tvDescription.text = item.description
             tvWindSpeed.text = context.getString(R.string.wind_speed, item.windSpeed)
+            clWeather.setOnClickListener {
+                onWeatherItemClick(item.date)
+            }
             Picasso.get().load(item.imageUrl).into(ivWeatherIcon)
         }
     }

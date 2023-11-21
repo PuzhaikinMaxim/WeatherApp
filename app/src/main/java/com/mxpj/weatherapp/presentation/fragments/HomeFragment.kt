@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.mxpj.weatherapp.databinding.FragmentHomeBinding
 import com.mxpj.weatherapp.presentation.BaseFragment
 import com.mxpj.weatherapp.presentation.adapters.WeatherListAdapter
@@ -34,6 +35,11 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
         val adapter = WeatherListAdapter(requireActivity())
         viewModel.weatherDataList.observe(requireActivity()){
             adapter.weatherDataList = it
+        }
+        adapter.onWeatherItemClick = {
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToWeatherDetailsFragment(it)
+            )
         }
         binding.rvRecentWeather.adapter = adapter
     }

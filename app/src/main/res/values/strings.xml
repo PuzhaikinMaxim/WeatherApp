@@ -10,6 +10,7 @@
     <string name="min_temperature">Мин: %d° С</string>
     <string name="max_temperature">Макс: %d° С</string>
     <string name="temperature_range">%d° С / %d° С</string>
+    <string name="feels_like">Чувствуется как: %d° С</string>
     <string name="overcast">%d%%</string>
     <string name="overcast_name">Облачность</string>
     <string name="relative_humidity">%d%%</string>
@@ -17,5 +18,12 @@
     <string name="pressure">%d мм рт. ст.</string>
     <string name="pressure_name">Давление</string>
     <string name="wind_speed">%d м/с</string>
+    <string name="wind_angle">Направление ветра: %d°</string>
     <string name="wind_speed_name">Скорость ветра</string>
+    <string name="min_temperature_with_desc">Мин: %d° С</string>
+    <string name="max_temperature_with_desc">Макс: %d° С</string>
+    <string name="overcast_with_desc">Облачность: %d%%</string>
+    <string name="relative_humidity_with_desc">Относительная влажность: %d%%</string>
+    <string name="pressure_with_desc">Давление: %d мм рт. ст.</string>
+    <string name="wind_speed_with_desc">Скорость ветра: %d м/с</string>
 </resources>

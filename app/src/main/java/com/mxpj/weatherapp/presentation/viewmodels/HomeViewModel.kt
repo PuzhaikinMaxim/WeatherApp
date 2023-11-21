@@ -4,13 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mxpj.weatherapp.domain.GetWeatherDataForFiveDaysUseCase
 import com.mxpj.weatherapp.domain.WeatherData
-import com.mxpj.weatherapp.domain.WeatherRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-    private val weatherRepository: WeatherRepository
+    private val getWeatherDataForFiveDaysUseCase: GetWeatherDataForFiveDaysUseCase
 ): ViewModel() {
 
     private val _weatherDataList = MutableLiveData<List<WeatherData>>()
@@ -19,7 +19,7 @@ class HomeViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            val weatherDataList = weatherRepository.getWeatherDataForFiveDays()
+            val weatherDataList = getWeatherDataForFiveDaysUseCase()
             _weatherDataList.value = weatherDataList
         }
     }

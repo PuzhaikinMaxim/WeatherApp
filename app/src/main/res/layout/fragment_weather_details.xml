@@ -4,5 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            style="@style/WeatherItemHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="24.07.2023" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_temperature_header"
+                style="@style/WeatherItemParameter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature_header"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_min_temperature"
+                style="@style/WeatherItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/min_temperature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperature_header"
+                tools:text="Мин: 20° С" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_max_temperature"
+                style="@style/WeatherItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/max_temperature"
+                app:layout_constraintStart_toEndOf="@id/tv_min_temperature"
+                app:layout_constraintTop_toTopOf="@id/tv_min_temperature"
+                tools:text="Макс: 20° С" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_temperature"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_feels_like"
+                style="@style/WeatherItemBlockHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feels_like"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Чувствуется как: 20° С" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_feels_like"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_overcast"
+                style="@style/WeatherItemBlockHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overcast"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Облачность: 20%" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_cloud"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_relative_humidity"
+                style="@style/WeatherItemBlockHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/relative_humidity"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Относительная влажность: 20%" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_water"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pressure"
+                style="@style/WeatherItemBlockHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/pressure"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Давление: 770 мм рт. ст." />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_pressure"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_speed"
+                style="@style/WeatherItemBlockHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/wind_speed"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Скорость ветра: 20 м/c" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_wind"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/WeatherBlock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_angle"
+                style="@style/WeatherItemBlockHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/wind_angle"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Направление ветра: 20°" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_direction"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>
